@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB1</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    var proGrad_1 = "vasavi";
+    console.log(proGrad_1);
+
+    var proGrad_2 = "kashyap";
+    console.log(proGrad_2)
+
+
+    function len(str) {
+        var length = 0;
+        while (str[length] !== undefined)
+            length++;
+        return length;
+    }
+
+    var len1 = len(proGrad_1);
+    var len2 = len(proGrad_2);
+    if (len1 > len2) {
+        console.log("the driver " + proGrad_1 + " has the longest name " + len1 + "  characters");
+    }
+    else if (len1 < len2) {
+        console.log("the Navigator " + proGrad_2 + " has the longest name " + len2 + "  characters");
+    }
+    else {
+        console.log("both driver and navigater " + proGrad_2, proGrad_1 + " has same length" + len1);
+    }
+
+    function vowel_count(str) {
+        var vowel_list = 'aeiouAEIOU';
+        var count = 0;
+
+        for (var x = 0; x < str.length; x++) {
+            if (vowel_list.indexOf(str[x]) !== -1) {
+                count += 1;
+            }
+
+        }
+        return count;
+    }
+
+    console.log(vowel_count("vasavi"));
+    console.log(vowel_count("kashyap"));
+
+    var upper = 0;
+    var lower = 0;
+    function count(str) {
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] >= 'A' && str[i] <= 'Z')
+                upper++;
+            else if (str[i] >= 'a' && str[i] <= 'z')
+                lower++;
+        }
+        console.log("upper case characters in " + str + ":" + upper);
+        console.log("lower case characters in " + str + ":" + lower);
+    }
+
+    count(proGrad_1);
+    count("KaSHYap");
+
+    proGrad_1 = proGrad_1.toUpperCase();
+    for (i = 0; i < len1; i++) {
+        console.log(proGrad_1[i] + " ");
+    }
+
+    function reverseString(s) {
+        var string = "";
+        for (var i = s.length - 1; i >= 0; i--) {
+            string += s[i];
+        }
+        return string;
+    }
+    console.log(reverseString('kashyap'));
+
+    console.log(proGrad_1 + " " + proGrad_2);
+
+    if (proGrad_1[0] < proGrad_2[0]) {
+        console.log("Lexicographic\n" + proGrad_1);
+    }
+    else {
+        console.log("Lexicographic\n" + proGrad_2);
+    }
+</script>
+
+</html>
